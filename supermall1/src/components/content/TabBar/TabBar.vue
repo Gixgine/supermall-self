@@ -3,12 +3,12 @@
    <child-tab-bar class="itembar" link="/home">
      <template v-slot:icon>
        <div>
-         <img src="assets/img/tabbar/home.svg" alt="">
+         <img src="~assets/img/tabbar/home.svg" alt="">
        </div>
      </template>
      <template v-slot:active-icon>
        <div>
-         <img src="assets/img/tabbar/home_active.svg" alt="">
+         <img src="~assets/img/tabbar/home_active.svg" alt="">
        </div>
      </template>
      <template v-slot:text>
@@ -20,12 +20,12 @@
    <child-tab-bar class="itembar" link="/category">
      <template v-slot:icon>
        <div>
-         <img src="assets/img/tabbar/category.svg" alt="">
+         <img src="~assets/img/tabbar/category.svg" alt="">
        </div>
      </template>
      <template v-slot:active-icon>
        <div>
-         <img src="assets/img/tabbar/category_active.svg" alt="">
+         <img src="~assets/img/tabbar/category_active.svg" alt="">
        </div>
      </template>
      <template v-slot:text>
@@ -37,12 +37,12 @@
    <child-tab-bar class="itembar" link="/cart"> 
      <template v-slot:icon>
        <div>
-         <img src="assets/img/tabbar/cart.svg" alt="">
+         <img src="~assets/img/tabbar/cart.svg" alt="">
        </div>
      </template>
      <template v-slot:active-icon>
        <div>
-         <img src="assets/img/tabbar/cart_active.svg" alt="">
+         <img src="~assets/img/tabbar/cart_active.svg" alt="">
        </div>
      </template>
      <template v-slot:text>
@@ -54,12 +54,12 @@
    <child-tab-bar class="itembar" link="/profile">
      <template v-slot:icon>
        <div>
-         <img src="assets/img/tabbar/profile.svg" alt="">
+         <img src="~assets/img/tabbar/profile.svg" alt="">
        </div>
      </template>
      <template v-slot:active-icon>
        <div>
-         <img src="assets/img/tabbar/profile_active.svg" alt="">
+         <img src="~assets/img/tabbar/profile_active.svg" alt="">
        </div>
      </template>
      <template v-slot:text>
@@ -92,6 +92,7 @@ export default {
   right:0;
   box-shadow: 0 -0.2px 1px rgb(10,10,0);
   height: 39px;
+  background-color: #fff;
 }
 .itembar{
   flex:1;

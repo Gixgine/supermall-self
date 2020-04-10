@@ -1,7 +1,7 @@
 <template>
   <div id="ChildTabBar" @click="tabClick">
-    <div v-if="active=isActive"><slot name="icon"></slot></div>
-    <div v-else><slot name="active-icon"></slot></div>
+    <div v-show="active=isActive"><slot name="icon"></slot></div>
+    <div v-show="!isActive"><slot name="active-icon"></slot></div>
     <div :style="activeStyle"><slot name="text"></slot></div>
   </div>
 </template>
