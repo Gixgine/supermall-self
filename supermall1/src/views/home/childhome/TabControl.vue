@@ -23,21 +23,22 @@ export default {
   },
   methods:{
     itemClick(index){
-      this.currentIndex=index
+      this.currentIndex=index;
+      this.$emit("tabClick",index)
     }
   }
 }
 </script>
 <style scoped>
   .tab-control{
-    display:flex;
+    display: flex;
     text-align: center;
+    line-height: 40px;
+    font-size: 15px;
     background-color: #fff;
-    margin-top: 5px;
+    z-index: 9;
   }
-  .tab-control span{
-        padding:5px;
-  }
+
   .item-control{
     flex:1
   }
