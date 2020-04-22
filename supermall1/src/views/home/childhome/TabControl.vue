@@ -36,7 +36,7 @@ export default {
     line-height: 40px;
     font-size: 15px;
     background-color: #fff;
-    z-index: 9;
+    /* z-index: 9; */
   }
 
   .item-control{

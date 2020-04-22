@@ -93,6 +93,7 @@ export default {
   box-shadow: 0 -0.2px 1px rgb(10,10,0);
   height: 39px;
   background-color: #fff;
+  z-index:999;
 }
 .itembar{
   flex:1;
