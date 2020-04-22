@@ -18,4 +18,3 @@ npm run build
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-### 接口改了，需要接口加老师微信coderwhy
