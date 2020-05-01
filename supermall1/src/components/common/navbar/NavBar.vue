@@ -1,34 +1,37 @@
 <template>
-  <div class="navbar">
-    <div class="left"><slot name="left"></slot></div>
-    <div class="center"><slot name="center"></slot></div>
-    <div class="right"><slot name="right"></slot></div>
+  <div class="nav-bar">
+    <div class="left">
+      <slot name="left"></slot>
+    </div>
+    <div class="center">
+      <slot name="center"></slot>
+    </div>
+    <div class="right">
+      <slot name="right"></slot>
+    </div>
   </div>
 </template>
+
 <script>
 export default {
-  name:"NavBar"
+  // 基本导航组件
+  name: 'NavBar'
 }
 </script>
+
 <style scoped>
-  .navbar{
-    /* position: fixed; */
-    display:flex;
-    height: 44px;
-    width: 100%;
-    line-height: 44px;
-    text-align: center;
-    /* overflow: hidden; */
-    /* background-color: orange; */
-    box-shadow: 0 1px 1px rgba(100,100,100,.2);
-  }
-  .left,.right{
-    /* width:60px; */
-    /* background-color: black; */
-    width:60px;
-  }
-  .center{
-    flex:1;
-    /* background-color: pink; */
-  }
+.nav-bar {
+  display: flex;
+  line-height: 45px;
+  text-align: center;
+  box-shadow: 0 1px 1px rgba(100, 100, 100, 0.1);
+  z-index: 19920918;
+}
+.left,
+.right {
+  width: 60px;
+}
+.center {
+  flex: 1;
+}
 </style>
