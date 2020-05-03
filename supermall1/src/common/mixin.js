@@ -1,18 +1,26 @@
-import {POP, NEW, SELL} from "./const";
-
-export const backTopMixin = {
-  data: function () {
+// 别名
+import { POP, NEW, SELL } from './const'
+// 防抖函数
+import { debounce } from '@/common/utils'
+// 图片防抖
+export const itemListenerMixin = {
+  data () {
     return {
-      showBackTop: false
+      itemImgListener: null
     }
   },
-  methods: {
-    backTop: function () {
-      this.$refs.scroll.scrollTo(0, 0, 300);
+  mounted () {
+    // 图片加载完成的事件监听
+    const refresh = debounce(this.$refs.scroll.refresh, 500)
+
+    this.itemImgListener = () => {
+      refresh()
     }
+    this.$bus.$on('itemImageLoad', this.itemImgListener)
+    console.log('混入的内容')
   }
 }
-
+// 商品类型选项卡
 export const tabControlMixin = {
   data: function () {
     return {
@@ -20,7 +28,7 @@ export const tabControlMixin = {
     }
   },
   methods: {
-    tabClick(index) {
+    tabClick (index) {
       switch (index) {
         case 0:
           this.currentType = POP
@@ -32,7 +40,7 @@ export const tabControlMixin = {
           this.currentType = SELL
           break
       }
-      console.log(this.currentType);
+      console.log(this.currentType)
     }
   }
 }
